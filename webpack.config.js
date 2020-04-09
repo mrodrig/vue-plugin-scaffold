@@ -26,6 +26,11 @@ module.exports = {
                 exclude: [
                     path.resolve(__dirname, 'node_modules')
                 ]
+            },
+            {
+                test: /\.css|\.less$/,
+                exclude: /node_modules\//,
+                loader: ['style-loader', 'css-loader', 'less-loader']
             }
         ]
     },
